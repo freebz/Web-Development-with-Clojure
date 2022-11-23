@@ -1,0 +1,25 @@
+(use 'guestbook.models.db)
+(create-guestbook-table)
+:reload
+reload
+(use 'guestbook.models.db :reload)
+(create-guestbook-table)
+(use 'guestbook.models.db :reload)
+(create-guestbook-table)
+(ns-unmap 'user 'save-message)
+(use 'guestbook.models.db)
+(save-message "Bob" "hello")
+(use 'guestbook.models.db :reload)
+(save-message "Bob" "hello")
+(read-guests)
+exit
+(use 'guestbook.models.db)
+(read-guests)
+exit
+(create-user-table)
+use db
+ns db
+(ns 'db)
+(ns user)
+(ns db)
+(create-user-table)
