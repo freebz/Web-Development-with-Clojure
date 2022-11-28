@@ -1,0 +1,266 @@
+(use db)
+(ns user)
+(ns db)
+db
+(db)
+create-users-table
+(ns models.db)
+db
+ns reporting-example.models.db
+db
+(use 'reporting-example.modles.db)
+db
+exit
+(use 'reporting-example.models.db)
+db
+(use 'reporting-example.models.db)
+db
+(use 'reporting-example.models.db)
+db
+(use 'reporting-example.models.db)
+db
+(create-users-table )
+(add-user {:id "foo" :pass "bar"})
+(get-user "foo")
+(get-user )
+(get-user {:id "foo"} )
+(get-user ["foo"] )
+(sql/with-connection db
+(sql/insert-records
+:users
+{:id "foo" :pass "x"}
+{:id "bar" :pass "y"}))
+(use 'reporting-example.models.db)
+(ns reporting-example.models.db)
+db
+(get-user "foo")
+(sql/insert-records
+(sql/with-connection db
+(sql/insert-records
+:users
+{:id "foo" :pass "x"}
+{:id "bar" :pass "y"}))
+(sql/with-connection db
+(sql/insert-records
+:users
+{:id "foo" :pass "x"}
+{:id "bar" :pass "y"}))
+(start-server)
+(ns reporting-example.repl)
+(start-server)
+start-server
+(ns 'reporting-example.repl)
+(ns reporting-example.repl)
+start-server
+(ns repl)
+start-server
+exit
+ns
+*ns*
+(ns reporting-example.models.db)
+(read-employee)
+(ns reporting-example.models.db)
+(read-employee)
+db
+*db*
+(use 'reporting-example.models.db)
+exit
+(ns reporting-example.models.db)
+db
+exit
+(use 'reporting-example.models.db)
+db
+(ns reporting-example.models.db)
+db
+(ns models.db)
+db
+(ns db)
+db
+exit
+(in-ns 'reporting-example.models.db)
+db
+exit
+(require 'reporting-example.models.db)
+(in-ns 'reporting-example.models.db)
+db
+use
+(use 'reporting-example.models.db)
+db
+db/db
+(ns 'reporting-example.models.db)
+(ns reporting-example.models.db)
+db
+sql
+(ns user)
+(def a 55)
+a
+(in-ns user)
+(in-ns db)
+in-ns 'db)
+(in-ns db)
+(in-ns 'db)
+(in-ns 'reporting-example.models.db)
+db
+a
+sql
+(in-ns models.db)
+(in-ns 'models.db)
+db
+exit
+a
+(in-ns 'reporting-example.models.db)
+sql
+db
+(nsin 'user)
+(in-ns 'user)
+a
+(def a 55)
+(in-ns 'reporting-example.models.db)
+a
+(in-ns 'user)
+a
+(require 'reporting-example.models.db)
+db
+(require 'reporting-example.models.db)
+db
+(require 'reporting-example.models.db)
+(in-ns 'reporting-example.models.db)
+db
+(sql/with-connection
+  db
+  (create-employee-table)
+  (sql/insert-rows
+   :employee
+   ["Albert Einstein", "Engineer", "Ulm", "Germany"]
+   ["Alfred Hitchcock", "Movie Director", "London", "UK"]
+   ["Wernher Von Braun", "Rocket Scientist", "Wyrzysk", "Poland"]
+   ["Sigmund Freud", "Neurologist", "Pribor", "Czech Republic"]
+   ["Mahatma Gandhi", "Lawyer", "Gujart", "India"]
+   ["sachin Tendulkar", "Cricket Player", "Mumbai", "India"]
+   ["Michael Schumacher", "F1 Racer", "Cologne", "Germany"]))
+(create-employee-table )
+db
+(create-employee-table)
+(read-employees )
+(in-ns 'reporting-example.reports)
+(require 'reporting-example.reports)
+pdf
+(require 'reporting-example.reports)
+(in-ns 'reporting-example.reports)
+pdf
+(pdf)
+(pdf
+ [{:header "Wow that was easy"}
+  [:list
+   [:chunk {:style :bold} "a bold item"]
+   "another item"
+   "yet another item"]
+  [:paragraph "I'm a paragraph!"]]
+ "doc.pdf")
+(require [clj-pdf.core :refer [pdf])
+pdf
+(require 'clj-pdf.core)
+(in-ns 'user)
+(require 'clj-pdf)
+(in-ns 'reporting-example.reports)
+pdf
+(require 'reporting-example.reports)
+pdf
+(in-ns user)
+(in-ns 'user)
+(require 'clj-pdf.core)
+clj-pdf.core.pdf
+(require 'clj-pdf.core :refer [pdf]))
+(require 'clj-pdf.core :refer [pdf])
+pdf
+(require [clj-pdf.core :refer [pdf]])
+pdf
+(require ['clj-pdf.core :refer [pdf]])
+pdf
+(ns reporting-example.reports
+  (:require [clj-pdf.core :refer [pdf template]]))
+pdf
+(pdf
+ [{:header "Wow that was easy"}
+  [:list
+   [:chunk {:style :bold} "a bold item"]
+   "another item"
+   "yet another item"]
+  [:paragraph "I'm a paragraph!"]]
+ "doc.pdf")
+(pdf
+ [{:header "Employee List"}
+  (into [:table
+         {:border false
+          :cell-border false
+          :header [{:color [0 150 150]} "Name" "Occupation" "Place" "Country"]}]
+        (employee-template (db/read-employees)))]
+ "report.pdf")
+(ns reporting-example.reports
+  (:require [clj-pdf.core :refer [pdf template]]
+            [reporting-example.models.db :as db]))
+(pdf
+ [{:header "Employee List"}
+  (into [:table
+         {:border false
+          :cell-border false
+          :header [{:color [0 150 150]} "Name" "Occupation" "Place" "Country"]}]
+        (employee-template (db/read-employees)))]
+ "report.pdf")
+(def employee-template
+  (template [$name $occupation $place $country]))
+(pdf
+ [{:header "Employee List"}
+  (into [:table
+         {:border false
+          :cell-border false
+          :header [{:color [0 150 150]} "Name" "Occupation" "Place" "Country"]}]
+        (employee-template (db/read-employees)))]
+ "report.pdf")
+(require 'reporting-example.reports)
+exit
+(require 'reporting-example.reports)
+(in-ns 'reporting-example.reports)
+employee-template
+(in-ns 'reporting-example.reports)
+(pdf
+ [{}
+  [:heading {:size 10} "Employees"]
+  [:line]
+  [:spacer]
+  (employee-template-paragraph (db/read-employees))]
+ "report.pdf")
+(in-ns 'user)
+(pdf
+ [{}
+  [:heading {:size 10} "Employees"]
+  [:line]
+  [:spacer]
+  (employee-template-paragraph (db/read-employees))]
+ "report.pdf")
+(def employee-template-paragraph
+  (template
+   [:paragraph
+    [:heading {:style {:size 15}} $name]
+    [:chunk {:style :bold} "occupation: "] $occupation "\n"
+    [:chunk {:style :bold} "place: "] $pace "\n"
+    [:chunk {:style :bold} "country; "] $country
+    [:spacer]]))
+(ns reporting-example.reports
+  (:require [clj-pdf.core :refer [pdf template]]
+            [reporting-example.models.db :as db]))
+(def employee-template-paragraph
+  (template
+   [:paragraph
+    [:heading {:style {:size 15}} $name]
+    [:chunk {:style :bold} "occupation: "] $occupation "\n"
+    [:chunk {:style :bold} "place: "] $pace "\n"
+    [:chunk {:style :bold} "country; "] $country
+    [:spacer]]))
+(pdf
+ [{}
+  [:heading {:size 10} "Employees"]
+  [:line]
+  [:spacer]
+  (employee-template-paragraph (db/read-employees))]
+ "report.pdf")
