@@ -1,0 +1,91 @@
+(start-server)
+(use 'picture-gallery.repl)
+(start-server)
+(use 'picture-gallery.repl)
+(start-server )
+(use 'picture-gallery.models.schema)
+(create-users-table )
+(start-server )
+(stop-server)
+(start-server )
+(use 'picture-gallery.repl)
+(start-server )
+(stop-server)
+(start-server)
+(use 'picture-gallery.repl :reload)
+(stop-server)
+(start-server)
+(use 'picture-gallery.repl)
+(start-server)
+(use 'picture-gallery.repl)
+(start-server)
+(stop-server)
+(start-server)
+(stop-server)
+(use 'picture-gallery.models.db)
+(sql/with-connection db
+(sql/with-query-results res ["select * from users"] (println res)))
+(require 'clojure.java.jdbc :as sql)
+(require 'clojure.java.jdbc)
+sql
+(use 'clojure.java.jdbc :as sql)
+jql
+sql
+(clojure.java.jdbc/with-connection db
+(clojure.java.jdbc/with-query-results res ["select * from users"] (println res)))
+(require [clojure.java.jdbc :as sql])
+sql
+(:require [clojure.java.jdbc :as sql])
+sql
+(require '[clojure.java.jdbc :as sql])
+sql
+(sql/with-connection db
+(sql/with-query-results res ["select * from users"] (println res)))
+(use 'picture-gallery.repl)
+(start-server)
+(use 'picture-gallery.models.db)
+(use 'picture-gallery.routes.auth)
+(use 'picture-gallery.views.layout)
+(use 'picture-gallery.routes.home)
+(use 'picture-gallery.routes.upload)
+(ImageIO/write
+(scale (ImageIO/read (io/input-stream "image.jpg")) 0.5 150 150)
+"jpeg"
+(File. "scaled.jpg"))
+(import javax.imageio.ImageIO)
+(ImageIO/write
+(scale (ImageIO/read (io/input-stream "image.jpg")) 0.5 150 150)
+"jpeg"
+(File. "scaled.jpg"))
+(require [clojure.java.io :as io])
+(require '[clojure.java.io :as io])
+io
+(io/input-stream "image.jpg")
+(io/input-stream "galleries/test.jpg")
+(ImageIO/write
+(scale (ImageIO/read (io/input-stream "galleries/test.jpg")) 0.5 150 150)
+"jpeg"
+(File. "scaled.jpg"))
+(import java.io.File)
+(ImageIO/write
+(scale (ImageIO/read (io/input-stream "galleries/test.jpg")) 0.5 150 150)
+"jpeg"
+(File. "scaled.jpg"))
+(use 'picture-gallery.models.schema)
+(create-images-table)
+(use 'picture-gallery.models.db)
+(images-by-user "foo")
+(use 'picture-gallery.models.db)
+(images-by-user "foo")
+(require [hiccup.element :refer :all])
+(require 'hiccup.element)
+hiccup.element
+hiccup.element.image
+(use 'hiccup.element.image)
+image
+(image "test")
+(hiccup.element.image "test")
+(use 'ring.middleware.anti-fogery)
+ring.middleware.anti-forgery
+(use 'ring.middleware)
+ring.middleware.anti-forgery
