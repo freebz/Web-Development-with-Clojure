@@ -1,0 +1,1 @@
+["^ ","~$display-gallery",["^ ","~:row",8,"~:col",1,"~:fixed-arities",["~#set",[1]],"~:name","^0","~:ns","~$picture-gallery.routes.gallery","~:top-ns","^7"],"~$gallery-routes",["^ ","^1",14,"^2",1,"^5","^9","^6","^7","^8","^7"],"~:filename","/home/fx/work/Web Development with Clojure/ch07/picture-gallery-selmer/src/picture_gallery/routes/gallery.clj"]

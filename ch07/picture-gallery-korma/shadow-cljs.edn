@@ -1,0 +1,13 @@
+;; shadow-cljs configuration
+{:source-paths
+ ["src-cljs"]
+
+ :dependencies
+ [[domina "1.0.3"]
+  [cljs-ajax "0.8.4"]]
+
+ :builds
+ {:app {:target :browser
+        :output-dir "resources/public/js/"
+        :asset-path "resources/public/js"
+        :modules {:gallery-cljs {:entries [site, gallery]}}}}}
